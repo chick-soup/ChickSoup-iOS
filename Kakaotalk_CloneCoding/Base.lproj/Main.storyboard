@@ -468,6 +468,14 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q50-Kv-Uax">
                                 <rect key="frame" x="64" y="408" width="286" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T2c-ZQ-ryG">
+                                        <rect key="frame" x="95" y="23" width="97" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTH-eh-IUD">
@@ -475,6 +483,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="CheckBtn"/>
                                 <connections>
+                                    <action selector="btnSetProfile:" destination="de1-qf-9KL" eventType="touchUpInside" id="T7L-tD-OYN"/>
                                     <segue destination="6WG-Co-L61" kind="show" id="p5k-Ij-cik"/>
                                 </connections>
                             </button>
@@ -485,6 +494,7 @@
                     <navigationItem key="navigationItem" id="gnP-sw-cxx"/>
                     <connections>
                         <outlet property="nickNameSetView" destination="Q50-Kv-Uax" id="5jR-y1-YtC"/>
+                        <outlet property="txtNickname" destination="T2c-ZQ-ryG" id="Q7I-1K-7De"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GaU-Po-Eyh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1042,6 +1052,6 @@
         <image name="mainLogo" width="250" height="207.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pR7-HZ-09e"/>
+        <segue reference="p5k-Ij-cik"/>
     </inferredMetricsTieBreakers>
 </document>
