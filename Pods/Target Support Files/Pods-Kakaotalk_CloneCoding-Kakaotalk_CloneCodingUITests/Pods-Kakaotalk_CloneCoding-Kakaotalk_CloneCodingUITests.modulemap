@@ -1,0 +1,6 @@
+framework module Pods_Kakaotalk_CloneCoding_Kakaotalk_CloneCodingUITests {
+  umbrella header "Pods-Kakaotalk_CloneCoding-Kakaotalk_CloneCodingUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
