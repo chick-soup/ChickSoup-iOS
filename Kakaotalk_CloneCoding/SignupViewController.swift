@@ -12,9 +12,14 @@ import UIKit
 class SignupViewController: UIViewController {
     
     var mainUrl = URL(string: "https://chicksoup.s3.ap-northeast-2.amazonaws.com/")
+    
     var emailCheckUrl = URL(string: "https://chicksoup.s3.ap-northeast-2.amazonaws.com/email/check")
+    
     var emailAuthUrl = URL(string: "https://chicksoup.s3.ap-northeast-2.amazonaws.com/email/auth")
+    
     var signupUrl = URL(string: "https://chicksoup.s3.ap-northeast-2.amazonaws.com/signup")
+    
+    var profileUrl = URL(string: "https://chicksoup.s3.ap-northeast-2.amazonaws.com/signup/profile")
     
     @IBOutlet weak var EmailView: UIView!
     
@@ -180,7 +185,7 @@ class SignupViewController: UIViewController {
                     
                     print("회원가입 성공 및 사용자 이름 = \"DEFUALT\", 상태 메세지 = NULL로 초기화")
                     
-                    UserDefaults.standard.set(jsonSerialization["access_token"], forKey: "access_token")
+            UserDefaults.standard.set(jsonSerialization["access_token"], forKey: "access_token")
                     
                 case 400:
                     print("이메일 인증 실패")
@@ -204,6 +209,10 @@ class SignupViewController: UIViewController {
         } else {
             print("비밀번호가 일치하지 않거나 8자리 미만입니다.")
         }
+        
+    }
+    
+    func signupProfile() {
         
     }
     
