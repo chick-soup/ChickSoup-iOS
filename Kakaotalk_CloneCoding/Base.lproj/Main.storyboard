@@ -441,6 +441,8 @@
                         <outlet property="pwView" destination="Tvf-E2-wbM" id="Bdf-yR-5f1"/>
                         <outlet property="txtEmailVaild" destination="yVA-DW-mjp" id="jYo-Pv-2lv"/>
                         <outlet property="txtEmailVaildCheck" destination="wMy-N2-juf" id="r7J-gd-vg0"/>
+                        <outlet property="txtPW" destination="BWa-yg-eG1" id="m9m-bq-Ewj"/>
+                        <outlet property="txtPWVaild" destination="xjt-D4-Ml0" id="Nhu-cp-EU8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nDn-du-dCR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

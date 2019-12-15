@@ -7,14 +7,14 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
+
 
 class SignupViewController: UIViewController {
     
     var mainUrl = URL(string: "https://chicksoup.s3.ap-northeast-2.amazonaws.com/")
     var emailCheckUrl = URL(string: "https://chicksoup.s3.ap-northeast-2.amazonaws.com/email/check")
     var emailAuthUrl = URL(string: "https://chicksoup.s3.ap-northeast-2.amazonaws.com/email/auth")
+    var signupUrl = URL(string: "https://chicksoup.s3.ap-northeast-2.amazonaws.com/signup")
     
     @IBOutlet weak var EmailView: UIView!
     
@@ -28,6 +28,10 @@ class SignupViewController: UIViewController {
     
     @IBOutlet weak var txtEmailVaildCheck: UITextField!
     
+    @IBOutlet weak var txtPW: UITextField!
+    
+    @IBOutlet weak var txtPWVaild: UITextField!
+    
     override func viewDidLoad() {
         EmailView.layer.cornerRadius = 22.5
         EmailVaildView.layer.cornerRadius = 22.5
@@ -40,7 +44,7 @@ class SignupViewController: UIViewController {
     
     func emailVaildCheck() {
         
-        if (txtEmailVaild.text!.count > 30) {
+        if (txtEmailVaild.text!.count > 30 ) {
             print("30자 이하만 사용 가능")
         } else {
             let parameters = ["email": txtEmailVaild.text!]
@@ -147,7 +151,60 @@ class SignupViewController: UIViewController {
     
     
     func signup() {
-        <#function body#>
+        
+        if (txtPW.text! == txtPWVaild.text! && txtPW.text!.count > 8) {
+            
+            let parameters = ["email": txtEmailVaild.text!, "password": txtPW.text!]
+            
+            var request = URLRequest(url: emailAuthUrl!)
+            
+            request.httpMethod = "POST"
+            do {
+                request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
+            } catch let error {
+                print(error.localizedDescription)
+            }
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.addValue("application/json", forHTTPHeaderField: "Accept")
+            URLSession.shared.dataTask(with: request) { [weak self] data, res, err in
+                guard self != nil else { return }
+                if let err = err { print(err.localizedDescription); return }
+                print((res as! HTTPURLResponse).statusCode)
+                switch (res as! HTTPURLResponse).statusCode{
+                    
+                    
+                    
+                case 200:
+                    let jsonSerialization = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+                    print("\(jsonSerialization)")
+                    
+                    print("회원가입 성공 및 사용자 이름 = \"DEFUALT\", 상태 메세지 = NULL로 초기화")
+                    
+                    UserDefaults.standard.set(jsonSerialization["access_token"], forKey: "access_token")
+                    
+                case 400:
+                    print("이메일 인증 실패")
+                    
+                case 470:
+                    print("이미 사용중인 이메일임")
+                    
+                case 471:
+                    print("이메일 인증을 요청하지 않은 이메일임")
+                    
+                case 473:
+                    print("다른 IP의 사용자가 인증한 이메일에 접근을 시도함")
+                    
+                default:
+                    DispatchQueue.main.async {
+                        print((res as! HTTPURLResponse).statusCode)
+                    }
+                    
+                }
+            }.resume()
+        } else {
+            print("비밀번호가 일치하지 않거나 8자리 미만입니다.")
+        }
+        
     }
     
 }
