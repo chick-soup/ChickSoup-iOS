@@ -183,6 +183,8 @@ class SignupViewController: UIViewController {
             }
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.addValue("application/json", forHTTPHeaderField: "Accept")
+            //        request.addValue("mulitpart/form-data", forHTTPHeaderField: <#T##String#>)
+            
             URLSession.shared.dataTask(with: request) { [weak self] data, res, err in
                 guard self != nil else { return }
                 if let err = err { print(err.localizedDescription); return }

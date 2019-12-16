@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 let refreshUrl = URL(string: "https://chicksoup.s3.ap-northeast-2.amazonaws.com/refresh")
 

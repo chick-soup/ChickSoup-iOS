@@ -67,6 +67,7 @@ class ProfileChangeViewController: UIViewController {
                 
             case 403:
                 print("사용 가능 기간이 만료된 JWT")
+                tokenRefresh()
                 
             case 404:
                 print("JWT로 인증된 사용자가 실제로는 존재하지 않음")
