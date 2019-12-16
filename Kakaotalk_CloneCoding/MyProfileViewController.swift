@@ -13,4 +13,8 @@ class MyProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    func showMyProfile(<#parameters#>) -> <#return type#> {
+        <#function body#>
+    }
 }
