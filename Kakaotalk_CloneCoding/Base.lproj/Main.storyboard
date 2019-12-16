@@ -738,10 +738,10 @@
             </objects>
             <point key="canvasLocation" x="4469.5652173913049" y="1893.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile Change View Controller-->
         <scene sceneID="NIn-JO-WW5">
             <objects>
-                <viewController id="M1Y-0Q-x8y" sceneMemberID="viewController">
+                <viewController id="M1Y-0Q-x8y" customClass="ProfileChangeViewController" customModule="Kakaotalk_CloneCoding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="biB-1A-0RA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -754,8 +754,8 @@
                                         <rect key="frame" x="87" y="64" width="240" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="김도현" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3s-un-ghg">
-                                                <rect key="frame" x="99" y="0.0" width="42" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3s-un-ghg">
+                                                <rect key="frame" x="55" y="0.0" width="132" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -772,7 +772,7 @@
                                         <rect key="frame" x="87" y="113" width="240" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="안녕하새오 힙찔이애오" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Jd-If-PxI">
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Jd-If-PxI">
                                                 <rect key="frame" x="55" y="-4" width="130" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -799,6 +799,10 @@
                         <viewLayoutGuide key="safeArea" id="UMX-4d-Trf"/>
                     </view>
                     <navigationItem key="navigationItem" id="aWc-se-0yh"/>
+                    <connections>
+                        <outlet property="txtNickname" destination="r3s-un-ghg" id="2xU-HU-b1K"/>
+                        <outlet property="txtStatusMessage" destination="7Jd-If-PxI" id="uMt-8l-eM0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ia-2B-dgB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1052,6 +1056,6 @@
         <image name="mainLogo" width="250" height="207.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="p5k-Ij-cik"/>
+        <segue reference="pR7-HZ-09e"/>
     </inferredMetricsTieBreakers>
 </document>
