@@ -25,6 +25,7 @@
 		4723B236238F4E5400C66761 /* ProfileChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4723B235238F4E5400C66761 /* ProfileChangeViewController.swift */; };
 		4723B238238F4EFE00C66761 /* BlockManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4723B237238F4EFE00C66761 /* BlockManageViewController.swift */; };
 		4723B23A238F522500C66761 /* IDCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4723B239238F522500C66761 /* IDCheckViewController.swift */; };
+		479888FD23A7CD7500EAD33B /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479888FC23A7CD7500EAD33B /* MyProfileViewController.swift */; };
 		47D0AFD12395581D0045DBD3 /* NickNameSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D0AFD02395581D0045DBD3 /* NickNameSetViewController.swift */; };
 		764796986800632AF3CFFDF5 /* Pods_Kakaotalk_CloneCodingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7E2B49B7A77CC5BB7919D6 /* Pods_Kakaotalk_CloneCodingTests.framework */; };
 		E5E320C8EB6309770D78E60C /* Pods_Kakaotalk_CloneCoding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092A185010355EF55D11FDFF /* Pods_Kakaotalk_CloneCoding.framework */; };
@@ -75,6 +76,7 @@
 		4723B235238F4E5400C66761 /* ProfileChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileChangeViewController.swift; sourceTree = "<group>"; };
 		4723B237238F4EFE00C66761 /* BlockManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockManageViewController.swift; sourceTree = "<group>"; };
 		4723B239238F522500C66761 /* IDCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDCheckViewController.swift; sourceTree = "<group>"; };
+		479888FC23A7CD7500EAD33B /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		47D0AFD02395581D0045DBD3 /* NickNameSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameSetViewController.swift; sourceTree = "<group>"; };
 		62D70D386A51227C84FC8342 /* Pods-Kakaotalk_CloneCoding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kakaotalk_CloneCoding.release.xcconfig"; path = "Target Support Files/Pods-Kakaotalk_CloneCoding/Pods-Kakaotalk_CloneCoding.release.xcconfig"; sourceTree = "<group>"; };
 		7FBD54E1DFD69B40237F0705 /* Pods-Kakaotalk_CloneCoding-Kakaotalk_CloneCodingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kakaotalk_CloneCoding-Kakaotalk_CloneCodingUITests.release.xcconfig"; path = "Target Support Files/Pods-Kakaotalk_CloneCoding-Kakaotalk_CloneCodingUITests/Pods-Kakaotalk_CloneCoding-Kakaotalk_CloneCodingUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				4723B22B238E8D1300C66761 /* FriendViewController.swift */,
 				4723B22D238E8D9400C66761 /* ChatViewController.swift */,
 				4723B1FF238E7DE800C66761 /* Main.storyboard */,
+				479888FC23A7CD7500EAD33B /* MyProfileViewController.swift */,
 				47D0AFD02395581D0045DBD3 /* NickNameSetViewController.swift */,
 				4723B239238F522500C66761 /* IDCheckViewController.swift */,
 				4723B237238F4EFE00C66761 /* BlockManageViewController.swift */,
@@ -439,6 +442,7 @@
 			files = (
 				4723B23A238F522500C66761 /* IDCheckViewController.swift in Sources */,
 				4723B232238EB89700C66761 /* FriendSearchViewController.swift in Sources */,
+				479888FD23A7CD7500EAD33B /* MyProfileViewController.swift in Sources */,
 				4723B238238F4EFE00C66761 /* BlockManageViewController.swift in Sources */,
 				4723B1FE238E7DE800C66761 /* LoginViewController.swift in Sources */,
 				4723B1FA238E7DE800C66761 /* AppDelegate.swift in Sources */,
