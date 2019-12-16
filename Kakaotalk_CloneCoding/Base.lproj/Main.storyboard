@@ -356,6 +356,9 @@
                                         <rect key="frame" x="224" y="0.0" width="68" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="EmailVaildBtn"/>
+                                        <connections>
+                                            <action selector="btnEmailVaildCheck:" destination="48I-EK-E4G" eventType="touchUpInside" id="Lec-OA-UTA"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yVA-DW-mjp">
                                         <rect key="frame" x="87" y="4" width="97" height="34"/>
@@ -397,6 +400,9 @@
                                         <rect key="frame" x="225" y="0.0" width="66" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="EmailVaildCheckBtn"/>
+                                        <connections>
+                                            <action selector="btnEmailVaildAuth:" destination="48I-EK-E4G" eventType="touchUpInside" id="Q9b-lf-qRw"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMy-N2-juf">
                                         <rect key="frame" x="85" y="4" width="97" height="34"/>
@@ -426,6 +432,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="SignupBtn"/>
                                 <connections>
+                                    <action selector="btnSignup:" destination="48I-EK-E4G" eventType="touchUpInside" id="3Aq-Pr-xBN"/>
                                     <segue destination="de1-qf-9KL" kind="show" id="xEc-5V-gGo"/>
                                 </connections>
                             </button>
@@ -785,6 +792,9 @@
                                         <rect key="frame" x="182" y="172" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="CheckBtn"/>
+                                        <connections>
+                                            <action selector="btnSetProfile:" destination="M1Y-0Q-x8y" eventType="touchUpInside" id="RdY-ig-8K3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99623256920000003" green="0.90342849489999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1056,6 +1066,6 @@
         <image name="mainLogo" width="250" height="207.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pR7-HZ-09e"/>
+        <segue reference="p5k-Ij-cik"/>
     </inferredMetricsTieBreakers>
 </document>
