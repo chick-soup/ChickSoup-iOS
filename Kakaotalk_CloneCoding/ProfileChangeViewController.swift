@@ -17,8 +17,12 @@ class ProfileChangeViewController: UIViewController {
     
     var profileUrl = URL(string: "https://chicksoup.s3.ap-northeast-2.amazonaws.com/users/my/profile")
     
+    let picker = UIImagePickerController()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        picker.delegate = self
     }
     
     @IBAction func btnSetProfile(_ sender: Any) {
@@ -30,16 +34,16 @@ class ProfileChangeViewController: UIViewController {
         
         let parameters = ["nickname": txtNickname.text!, "status_message": txtStatusMessage.text!, "where": "mobile"
             
-//            , "profile": 프로필 사진 들어가야함, "background": 배경사진 들어가야함
+            //            , "profile": 프로필 사진 들어가야함, "background": 배경사진 들어가야함
             
-            ]
+        ]
         
         
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("application/json", forHTTPHeaderField: "access_token")
         
-
+        
         request.addValue("Authorization", forHTTPHeaderField: String(UserDefaults.standard.string(forKey :"access_token")!))
         
         request.httpMethod = "PUT"
@@ -80,9 +84,34 @@ class ProfileChangeViewController: UIViewController {
         }.resume()
     }
     
-    func getProfilePhoto(<#parameters#>) -> <#return type#> {
+    func getProfilePhoto() {
+        let alart = UIAlertController(title: "프로필 사진", message: "사진 선택", preferredStyle: .actionSheet)
+        
+        let library = UIAlertAction(title: "사진엘범",style: .default) { (action) in self.openLibrary()
+        }
+        
+        let camera =  UIAlertAction(title: "카메라", style: .default) { (action) in
+            self.openCamera()
+        }
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        alart.addAction(library)
+        alart.addAction(camera)
+        alart.addAction(cancel)
+        
+        present(alart, animated: true, completion: nil)
+        
+    }
+    
+    func openLibrary() {
         <#function body#>
     }
+    
 }
+extension ProfileChangeViewController : UIImagePickerControllerDelegate {
+    
+}
+
 
 
