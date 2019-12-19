@@ -762,7 +762,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3s-un-ghg">
-                                                <rect key="frame" x="55" y="0.0" width="132" height="34"/>
+                                                <rect key="frame" x="55" y="0.0" width="129" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -803,6 +803,9 @@
                                 <rect key="frame" x="0.0" y="137" width="414" height="362"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ProfileBackground"/>
+                                <connections>
+                                    <action selector="btnSetBackGroundImage:" destination="M1Y-0Q-x8y" eventType="touchUpInside" id="4hh-nx-lVt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -818,10 +821,10 @@
             </objects>
             <point key="canvasLocation" x="1637.68115942029" y="-1513.3928571428571"/>
         </scene>
-        <!--My Profile View Controller-->
+        <!--Profile Change View Controller-->
         <scene sceneID="oaB-Js-tyH">
             <objects>
-                <viewController id="JW4-Zb-Dll" customClass="MyProfileViewController" customModule="Kakaotalk_CloneCoding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JW4-Zb-Dll" customClass="ProfileChangeViewController" customModule="Kakaotalk_CloneCoding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dqY-Cb-fI9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

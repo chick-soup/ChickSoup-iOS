@@ -20,9 +20,17 @@ class ProfileChangeViewController: UIViewController {
     let picker = UIImagePickerController()
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        picker.delegate = self
+        picker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+    }
+    
+    
+    @IBAction func btnSetBackGroundImage(_ sender: Any) {
+        getBackGroundPhoto()
+        btnSetBackGroundImage.setImage(image)
     }
     
     @IBAction func btnSetProfile(_ sender: Any) {
@@ -84,8 +92,8 @@ class ProfileChangeViewController: UIViewController {
         }.resume()
     }
     
-    func getProfilePhoto() {
-        let alart = UIAlertController(title: "프로필 사진", message: "사진 선택", preferredStyle: .actionSheet)
+    func getBackGroundPhoto() {
+        let alart = UIAlertController(title: "배경 사진", message: "사진 선택", preferredStyle: .actionSheet)
         
         let library = UIAlertAction(title: "사진엘범",style: .default) { (action) in self.openLibrary()
         }
@@ -110,12 +118,27 @@ class ProfileChangeViewController: UIViewController {
     }
     
     func openCamera() {
-        picker.sourceType = .camera
-        present(picker, animated: false, completion:  nil)
+        if(UIImagePickerController .isSourceTypeAvailable(.camera)){
+            picker.sourceType = .camera
+            present(picker, animated: false, completion: nil)
+        } else {
+            print("Camera not available")
+        }
+        
     }
     
 }
 extension ProfileChangeViewController : UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let image = info[UIImagePickerController.InfoKey.originalImage]
+        
+        
+        
+                    print(info)
+        
+        dismiss(animated: true, completion: nil)
+    }
     
 }
 

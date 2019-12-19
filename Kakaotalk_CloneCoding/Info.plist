@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>test</string>
+	<string>사진 엘범 사용</string>
 	<key>NSCameraUsageDescription</key>
-	<string>test</string>
+	<string>카메라 사용</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
