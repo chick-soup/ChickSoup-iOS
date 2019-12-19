@@ -108,6 +108,10 @@ class ProfileChangeViewController: UIViewController {
         <#function body#>
     }
     
+    func openCamera() {
+        
+    }
+    
 }
 extension ProfileChangeViewController : UIImagePickerControllerDelegate {
     
