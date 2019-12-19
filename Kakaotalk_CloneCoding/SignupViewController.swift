@@ -74,7 +74,6 @@ class SignupViewController: UIViewController {
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.addValue("application/json", forHTTPHeaderField: "Accept")
             
-//            request.addValue("mulitpart/form-data", forHTTPHeaderField: <#T##String#>)
             
             URLSession.shared.dataTask(with: request) { [weak self] data, res, err in
                 guard self != nil else { return }
@@ -177,13 +176,12 @@ class SignupViewController: UIViewController {
             
             request.httpMethod = "POST"
             do {
-                request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
+                request.httpBody = try JSONSerialization.data(withJSONObject: parameters,  options: .prettyPrinted)
             } catch let error {
                 print(error.localizedDescription)
             }
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.addValue("application/json", forHTTPHeaderField: "Accept")
-            //        request.addValue("mulitpart/form-data", forHTTPHeaderField: <#T##String#>)
             
             URLSession.shared.dataTask(with: request) { [weak self] data, res, err in
                 guard self != nil else { return }
