@@ -105,7 +105,8 @@ class ProfileChangeViewController: UIViewController {
     }
     
     func openLibrary() {
-        <#function body#>
+        picker.sourceType = .photoLibrary
+        present(picker, animated: false, completion: nil)
     }
     
     func openCamera() {
