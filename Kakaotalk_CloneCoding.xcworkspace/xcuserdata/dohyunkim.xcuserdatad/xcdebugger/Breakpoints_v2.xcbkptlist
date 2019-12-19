@@ -48,7 +48,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
             endingLineNumber = "28"
-            landmarkName = "setProfile()"
+            landmarkName = "btnSetProfile(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
