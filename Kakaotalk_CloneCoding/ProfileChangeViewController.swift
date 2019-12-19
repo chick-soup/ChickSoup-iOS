@@ -39,8 +39,7 @@ class ProfileChangeViewController: UIViewController {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("application/json", forHTTPHeaderField: "access_token")
         
-//        request.addValue("mulitpart/form-data", forHTTPHeaderField: <#T##String#>)
-        
+
         request.addValue("Authorization", forHTTPHeaderField: String(UserDefaults.standard.string(forKey :"access_token")!))
         
         request.httpMethod = "PUT"
@@ -79,6 +78,10 @@ class ProfileChangeViewController: UIViewController {
                 print("error")
             }
         }.resume()
+    }
+    
+    func getProfilePhoto(<#parameters#>) -> <#return type#> {
+        <#function body#>
     }
 }
 
