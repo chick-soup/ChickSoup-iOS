@@ -20,6 +20,7 @@ class ProfileChangeViewController: UIViewController {
     let picker = UIImagePickerController()
     
     
+<<<<<<< HEAD
     
     
     override func viewDidLoad() {
@@ -31,6 +32,11 @@ class ProfileChangeViewController: UIViewController {
     @IBAction func btnSetBackGroundImage(_ sender: Any) {
         getBackGroundPhoto()
         btnSetBackGroundImage.setImage(image)
+=======
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        picker.delegate = self
+>>>>>>> master
     }
     
     @IBAction func btnSetProfile(_ sender: Any) {
@@ -92,8 +98,13 @@ class ProfileChangeViewController: UIViewController {
         }.resume()
     }
     
+<<<<<<< HEAD
     func getBackGroundPhoto() {
         let alart = UIAlertController(title: "배경 사진", message: "사진 선택", preferredStyle: .actionSheet)
+=======
+    func getProfilePhoto() {
+        let alart = UIAlertController(title: "프로필 사진", message: "사진 선택", preferredStyle: .actionSheet)
+>>>>>>> master
         
         let library = UIAlertAction(title: "사진엘범",style: .default) { (action) in self.openLibrary()
         }
@@ -118,6 +129,7 @@ class ProfileChangeViewController: UIViewController {
     }
     
     func openCamera() {
+<<<<<<< HEAD
         if(UIImagePickerController .isSourceTypeAvailable(.camera)){
             picker.sourceType = .camera
             present(picker, animated: false, completion: nil)
@@ -138,9 +150,17 @@ extension ProfileChangeViewController : UIImagePickerControllerDelegate {
                     print(info)
         
         dismiss(animated: true, completion: nil)
+=======
+        picker.sourceType = .camera
+        present(picker, animated: false, completion:  nil)
+>>>>>>> master
     }
     
 }
+extension ProfileChangeViewController : UIImagePickerControllerDelegate {
+    
+}
+
 
 
 
